@@ -1,0 +1,58 @@
+.game-container {
+  .board-container {
+    float: left;
+
+    canvas {
+      background-color: #000;
+      border: 1px solid #555;
+      border-radius: 3px;
+    }
+
+    .move-info {
+      padding: 5px 10px;
+      font-size: 11px;
+      color: #aaa;
+
+      .arrows {
+        font-family: monospace;
+      }
+    }
+
+    .player-points {
+      position: relative;
+      padding: 5px 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+
+      .points-message {
+        position: absolute;
+        right: 15px; top: -20px;
+        color: #ddd;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right;
+        opacity: 0;
+        animation-name: animate-points;
+        animation-duration: 1s;
+      }
+
+      @keyframes animate-points {
+        from { top: -20px; opacity: 1; }
+        to   { top: -40px; opacity: 0; }
+      }
+    }
+  }
+
+  .player-list {
+    float: right;
+    padding-top: 30px;
+    color: #aaa;
+
+    table {
+      th, td {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
