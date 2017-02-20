@@ -8,7 +8,7 @@ let server = http.Server(app);
 let io = new SocketIO(server);
 let port = 3000;
 
-//app.use(compression({}));
+
 app.use(express['static'](__dirname + '/../client'));
 
 const gameController = new GameController(io);

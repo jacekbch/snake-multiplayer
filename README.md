@@ -33,7 +33,7 @@ gulp run
 ```
 
 You can also use the following command to automate all these previous ones 
-(projects will be rebuild whenever a change will be made to any file):
+(project will be rebuild whenever a change will be made to any file):
 
 ```
 gulp watch

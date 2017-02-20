@@ -16,8 +16,7 @@ export default class LoginBox extends React.Component  {
 
   handleJoinGame(e) {
     e.preventDefault();
-    let joinGame = this.props.handleJoinGame.bind(null, this.state.playerName);
-    joinGame();
+    this.props.handleJoinGame(this.state.playerName);
   }
 
   render() {

@@ -5,8 +5,6 @@ let del = require('del');
 let nodemon = require('gulp-nodemon');
 let babel = require('gulp-babel');
 
-// Development Tasks
-// -----------------
 
 gulp.task('clean', () =>
   del(['dist/**/*'])
@@ -32,7 +30,6 @@ gulp.task('build-client', () =>
 gulp.task('watch', ['build'], () => {
   gulp.watch(['./src/client/**/*.*'], ['build-client']);
   gulp.watch(['./src/server/**/*.*'], ['build-server']);
-  //gulp.watch(['src/shared/**/*.*'], ['build-server', 'build-client']);
   gulp.start('run');
 });
 
@@ -40,7 +37,6 @@ gulp.task('run', () => {
   nodemon({
     delay: 10,
     script: './dist/server/server.js',
-    // args: ["config.json"],
     ext: 'js',
     watch: 'src'
   })

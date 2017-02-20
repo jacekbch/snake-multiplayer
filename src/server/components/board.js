@@ -126,15 +126,4 @@ export default class Board {
 
     return cellsWithCollisions;
   }
-
-  printBoard() {
-    console.log('[---------------BOARD------------------]');
-    for(let col=0; col<this.boardHeight; col++) {
-      let colStr = '';
-      for(let row=0; row <this.boardWidth; row++) {
-        colStr += '[' + this.board[col][row].print() + '] ';
-      }
-      console.log(colStr);
-    }
-  }
 }

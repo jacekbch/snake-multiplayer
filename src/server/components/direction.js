@@ -31,36 +31,3 @@ export const Direction = {
     }
   }
 };
-
-
-/*export const Direction = {
-  UP    : new Coordinate(  0, -1 ),
-  DOWN  : new Coordinate(  0,  1 ),
-  LEFT  : new Coordinate( -1,  0 ),
-  RIGHT : new Coordinate(  1,  0 )
-};
-
-export const DirectionFromStr = {
-  'up'    : Direction.UP,
-  'down'  : Direction.DOWN,
-  'left'  : Direction.LEFT,
-  'right' : Direction.RIGHT
-};
-
-export const DirectionArray = [
-  Direction.UP,
-  Direction.DOWN,
-  Direction.LEFT,
-  Direction.RIGHT
-];
-
-export AvailableDirections = function(direction) {
-  switch(direction) {
-
-  }
-}
-AvailableDirections.set(Direction.UP,    [Direction.LEFT, Direction.RIGHT]);
-AvailableDirections.set(Direction.DOWN,  [Direction.LEFT, Direction.RIGHT]);
-AvailableDirections.set(Direction.LEFT,  [Direction.UP,   Direction.DOWN]);
-AvailableDirections.set(Direction.RIGHT, [Direction.UP,   Direction.DOWN]);
-*/

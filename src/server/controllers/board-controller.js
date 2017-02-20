@@ -30,16 +30,16 @@ export default class BoardController {
 
   generateObstacles() {
     if(GameConfig.BOARD_OBSTACLES) {
-      let numOfObstaclesFactor = Helpers.randomMinMaxDec(0.004, 0.01); // (Math.random() * 0.006) + 0.004;
+      let numOfObstaclesFactor = Helpers.randomMinMaxDec(0.004, 0.01);
       let numOfObstacles = Math.floor(this.boardWidth * this.boardHeight * numOfObstaclesFactor);
 
       for(let obstacleNum = 1; obstacleNum <= numOfObstacles; obstacleNum++) {
-        let length = Helpers.randomMinMax(3, 6); // Math.floor(Math.random() * 3) + 4;
+        let length = Helpers.randomMinMax(3, 6);
 
         let headCoordinate;
         while(true) {
-          let x = Helpers.randomMinMax(3, this.boardWidth-4); // Math.floor(Math.random() * (this.boardWidth-4)) + 3;
-          let y = Helpers.randomMinMax(3, this.boardHeight-4); // Math.floor(Math.random() * (this.boardHeight-4)) + 3;
+          let x = Helpers.randomMinMax(3, this.boardWidth-4);
+          let y = Helpers.randomMinMax(3, this.boardHeight-4);
           headCoordinate = new Coordinate(x, y);
 
           let cellsToCheck = Direction.allArray.slice();
@@ -260,9 +260,6 @@ export default class BoardController {
       killer.points += pointsForKiller;
       this.io.to(killerId).emit('added-points', pointsForKiller);
 
-    } else if(false) { // by both player heads
-
-      
     } else if(cell.isOccupiedByPlayerHead() && cell.isOccupiedByFood()) {
       let playerId = cell.getOnePlayerOccupiedByHead();
       let foodId = cell.getFoodOccupied();

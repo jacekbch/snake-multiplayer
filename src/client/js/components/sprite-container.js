@@ -48,10 +48,6 @@ export default class SpriteContainer {
     this.sprites.set('coin',
       new AnimatedSprite(Object.assign({}, this.defaultAnimatedData, { positionInSheet: 5*16, numberOfFrames: 10, ticksPerFrame: 4 }))
     );
-
-    /*this.sprites.set('animated-sprite-1',
-      new AnimatedSprite(Object.assign({}, this.defaultAnimatedData, { positionInSheet: 0 }))
-    );*/
   }
 
   getSprite(name) {

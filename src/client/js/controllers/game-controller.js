@@ -100,11 +100,6 @@ export default class GameController extends React.Component  {
       addedPoints : points,
       playerPoints : this.state.playerPoints + points
     });
-
-    /*let self = this;
-    setTimeout(() => {
-      self.setState({showAddedPoints : false});
-    }, 4000);*/
   }
 
   gameOver(points) {
@@ -148,9 +143,6 @@ export default class GameController extends React.Component  {
       let y = food.position.y * GameConfig.BLOCK_SIZE;
       this.spriteContainer.getSprite(blockType).render(x, y, this.gameCanvas);
     }
-    //this.spriteContainer.getSprite('crystal-orange').render(200, 200, this.gameCanvas);
-    //this.spriteContainer.getSprite('crystal-pink').render(220, 200, this.gameCanvas);
-    //this.spriteContainer.getSprite('coin').render(240, 200, this.gameCanvas);
   }
 
   getBoardSize() {

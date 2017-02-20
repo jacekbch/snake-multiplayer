@@ -18,7 +18,7 @@ module.exports = {
             "style",
             "css?sourceMap!sass?sourceMap",
             { publicPath: '../' }
-            // (up)-> workaround to a problem of relative path when putting *.css file into css/ folder  <-- kinda weird
+            // (up)-> workaround to a problem of relative path when putting *.css file into css/ folder
           ),
         },
         { test: /\.(svg|png|jpe?g|gif)(\?\S*)?$/, loader: 'file?name=client/images/[name].[ext]' },

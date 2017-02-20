@@ -71,7 +71,7 @@ export default class ClientController extends React.Component  {
           { gameController }
         </div>
         <footer>
-          <p>Snake Multiplayer © 2016</p>
+          <p>Snake Multiplayer © 2016/2017</p>
         </footer>
       </div>
     );

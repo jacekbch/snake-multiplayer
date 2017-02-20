@@ -88,12 +88,4 @@ export default class BoardCell {
     }
     return null;
   }
-
-  print() {
-    let str = '';
-    for(let o of this.content) {
-      str += o.type + ' ';
-    }
-    return str;
-  }
 }
